@@ -20,7 +20,6 @@ def scraping(url):
         "User-Agent": 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36'}
     page = requests.get(url, headers=agent)
     soup = BeautifulSoup(page.content, "html.parser")
-    results = soup.find(id="competition-select")
 
     job_elements = soup.find_all("div", class_="transfers-container")
     list_players = []
